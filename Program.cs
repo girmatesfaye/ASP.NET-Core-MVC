@@ -9,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 if (builder.Environment.IsDevelopment())
 {
     builder.Services.AddDbContext<MvcMovieContext>(options =>
-options.UseSqlServer(
+       options.UseSqlServer(
     builder.Configuration.GetConnectionString("MvcMovieContext")));}
 else
 {
