@@ -22,7 +22,8 @@ else
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
+// Register validation services with dependency injection:
+builder.Services.AddValidation();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

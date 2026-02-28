@@ -92,7 +92,6 @@ namespace MvcMovie.Controllers
             }
             return View(movie);
         }
-
         // GET: Movies/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -144,9 +143,10 @@ namespace MvcMovie.Controllers
             return View(movie);
         }
 
-        // GET: Movies/Delete/5
+       // GET: Movies/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
+
             if (id == null)
             {
                 return NotFound();
@@ -176,7 +176,6 @@ namespace MvcMovie.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
-
         private bool MovieExists(int id)
         {
             return _context.Movie.Any(e => e.Id == id);
